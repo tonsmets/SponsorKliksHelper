@@ -4,14 +4,11 @@ var dataObj = { 'clubs': []};
 
 function getDataFromQuery() {
   var query = input.value;
-
   var dataUrl = 'http://www.sponsorkliks.com/sdk/Functions/ajax.php?m=Club&c=search_club_by_naam&r%5bk%5d=sk_id&r%5bv%5d=clubnaam_concat&p=' + encodeURIComponent(query);
   var x = new XMLHttpRequest();
   x.open('GET', dataUrl);
-  // The Google image search API responds with JSON, so let Chrome parse it.
   x.responseType = 'json';
   x.onload = function() {
-    // Parse and process the response from Google Image Search.
     var response = x.response;
     if (!response || response.length === 0) {
       console.log("ERROR: Bad response from server:" + response);
