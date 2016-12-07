@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "SponsorKliks Helper",
+  "description": "Be notified when you visit a webshop that is supported by SponsorKliks. (Dutch only).",
+  "version": "1.0",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true,
+    "open_in_tab": true
+  },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "options_page": "options.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://www.sponsorkliks.com/",
+    "http://www.sponsorkliks.com/",
+    "https://*.sponsorkliks.com/",
+    "http://*.sponsorkliks.com/"
+  ]
+}
